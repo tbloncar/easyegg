@@ -126,7 +126,7 @@ var easyegg = (function() {
     }
 
     if(lacksKeyName(code)) {
-      registeredCode = codeMap[code];
+      registeredCode = registeredCodes[code];
 
       // Does the code match a seeded code name?
       if(registeredCode) {
