@@ -1,6 +1,24 @@
 {
   "name": "easyegg",
   "version": "0.0.1",
+  "description": "Add Easter eggs to your website with ease.",
+  "keywords": [
+    "easter",
+    "egg",
+    "konami",
+    "code"
+  ],
+  "homepage": "https://github.com/tbloncar/easyegg",
+  "bugs": "https://github.com/tbloncar/easyegg/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Travis Loncar"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tbloncar/easyegg"
+  },
+  "main": "./src/easyegg.js",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-babel": "^5.0.0",
