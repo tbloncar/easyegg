@@ -5,16 +5,16 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
-      all: ['src/*.js'] 
+      all: ['src/*.js']
     },
     babel: {
       options: {
-        sourceMap: true 
+        sourceMap: true
       },
       dist: {
         files: {
-          'src/es6/easyegg.es5.js': 'src/es6/easyegg.js' 
-        } 
+          'src/es6/easyegg.es5.js': 'src/es6/easyegg.js'
+        }
       }
     },
     uglify: {

@@ -1,28 +1,27 @@
 :egg: easyegg.js
 ----------
 
-Inspired by [Egg.js](http://thatmikeflynn.com/egg.js/), easyegg.js is a
-JavaScript library that provides a simple API for creating keystroke-enabled
+Easyegg provides a simple API for creating keystroke-enabled
 Easter eggs on websites.
 
 ### Installation
 
 Install easyegg with npm:
 
-  npm install --save easyegg
+    npm install --save easyegg
 
 No `npm`? Grab `easyegg.min.js` from `dist/` and include it in your project.
 No dependencies are needed, and `easyegg` is made global.
 
 ### Usage
 
-The `easyegg` API exposes two methods: `easyegg.on()` and `easyegg.register()`.
+The `easyegg` API exposes two methods: `easyegg.on` and `easyegg.register`.
 
 [View Demo](http://codepen.io/tbloncar/pen/xZKELe)
 
 #### easyegg.on
 
-Use `easyegg.on()` to bind a callback function to a key sequence. Key names
+Use `easyegg.on` to bind a callback function to a key sequence. Key names
 should be expressed in English (see `keyMap` in source) and delimited by the pipe (`|`)
 character. Alternatively, one can provide a regular, non-delimited string code;
 this will result in a grapheme-by-grapheme matching algorithm.
@@ -41,9 +40,9 @@ easyegg.on('helloworld', function() {
 #### easyegg.register
 
 One can also specify a "registered" or pre-seeded code name to bind
-the callback's execution to the corresponding code. Below, we register
-the Mike Tyson code ("0073735963") under the name "tyson". This gives
-us a nice, human-readable string to bind to in `easyegg.on`.
+the callback's execution to the corresponding key sequence. Below, we register
+the Mike Tyson key sequence ("0073735963") under the name "tyson". This gives
+us a nice, human-readable string for `easyegg.on`.
 
 ```js
 // Register a named code and bind to it
@@ -52,7 +51,7 @@ easyegg.on('tyson', function() {
   console.log('You unlocked Mike Tyson!');
 });
 ```
-There are two pre-seeded named codes:
+There are two pre-seeded code names:
 ["konami"](https://en.wikipedia.org/wiki/Konami_Code) and
 ["turok"](http://www.urbandictionary.com/define.php?term=bewareoblivionisathand).
 
@@ -62,6 +61,11 @@ easyegg.on('konami', function() {
   console.log('You entered the Konami code!');
 });
 ```
+### Alternatives
+
+Mike Flynn and Rob McVey created [Egg.js](http://thatmikeflynn.com/egg.js/)
+(long before this project existed). Easyegg was inspired by their efforts.
+
 ### License
 
 Copyright (c) 2015 Travis Loncar.
